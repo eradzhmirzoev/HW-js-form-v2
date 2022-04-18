@@ -29,7 +29,7 @@ li {
     margin-top: 10px;
 }
 
-.changeBackground {
+.changeBackgroundLi {
     background: #009803;
 }
 
@@ -38,12 +38,12 @@ li {
     cursor: pointer;
 }
 
-.invalid {
+.stateInvalid {
     border-color: red;
     color: red;
 }
 
-.error {
+.block-error {
     margin-top: 5px;
     height: 20px;
     color: red;

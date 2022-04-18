@@ -1,16 +1,16 @@
 let elemInput = document.querySelector('input');
 let elemUl = document.querySelector('ul');
 let addList = document.querySelector('.addList');
-let error = document.querySelector('.error');
+let error = document.querySelector('.block-error');
 const regexp = /^[a-zA-Z\d]{3,25}$/;
 
 elemInput.addEventListener('input', function(event){
     if (!regexp.test(elemInput.value) && elemInput.value !== '') {
-        elemInput.classList.add('invalid');
+        elemInput.classList.add('stateInvalid');
         error.innerText = 'Ошибка ввода';
         return;
     }
-    elemInput.classList.remove('invalid');
+    elemInput.classList.remove('stateInvalid');
     error.innerText = '';
 
 });
@@ -30,7 +30,7 @@ document.querySelector('.wrapper').addEventListener('click', (event) => {
     }
     
     if (event.target.closest('li')) {
-        event.target.closest('li').classList.toggle('changeBackground');
+        event.target.closest('li').classList.toggle('changeBackgroundLi');
     }
 
 });
