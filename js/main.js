@@ -20,7 +20,6 @@ document.querySelector('.wrapper').addEventListener('click', (event) => {
 
     if (event.target.className === 'addList' && elemInput.value !== '' &&   regexp.test(elemInput.value)) {
         elemLi.innerHTML =`${elemInput.value} <button class="delete">DELETE</button>`;
-        elemInput.style.borderColor = '';
         elemInput.value = '';
         elemUl.append(elemLi);
     } 
